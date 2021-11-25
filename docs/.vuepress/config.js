@@ -9,5 +9,7 @@
   
     themeConfig: {
       logo: '/images/logo.png',
+      lastUpdated: false,   // 禁用显示更新时间
+      contributors: false   // 禁用显示贡献者 
     },
   }
