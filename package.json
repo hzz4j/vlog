@@ -1,0 +1,24 @@
+{
+  "name": "vlog",
+  "version": "1.0.0",
+  "description": "静默的blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Q10Viking/vlog.git"
+  },
+  "author": "静默",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Q10Viking/vlog/issues"
+  },
+  "homepage": "https://github.com/Q10Viking/vlog#readme",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.27"
+  }
+}
