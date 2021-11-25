@@ -20,5 +20,8 @@
   "homepage": "https://github.com/Q10Viking/vlog#readme",
   "devDependencies": {
     "vuepress": "^2.0.0-beta.27"
+  },
+  "dependencies": {
+    "directory-tree": "^3.0.1"
   }
 }
