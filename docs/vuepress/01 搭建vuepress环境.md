@@ -69,3 +69,11 @@ typora-root-url: ..\.vuepress\public
   }
 ```
 
+
+
+## 参考
+
+[快速上手 | VuePress (vuejs.org)](https://v2.vuepress.vuejs.org/zh/guide/getting-started.html)
+
+[配置 | VuePress (vuejs.org)](https://v2.vuepress.vuejs.org/zh/reference/config.html#站点配置)
+
