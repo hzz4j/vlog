@@ -4,9 +4,24 @@
 
 const path = require("path");
 const dirTree = require("directory-tree");
+const titles = require('./textTitle');
 const SRC_PATH = path.resolve(__dirname, "../../");
 var fs = require('fs');
 
+
+/**
+ * 默认使用文件夹名称作为route,如果文件有中文则sidebar不会生效
+ * 维护了一个份textTitle来将route转换为title
+ */
+function getTitle(name){
+  if(titles[name] === undefined){
+    console.log("===================================================================");
+    console.warn("[Warn]: 请在textTitle.js 文件中维护一个 %s 的title",'vuepress1');
+    console.log("===================================================================");
+    return name;
+  }
+  return titles[name];
+}
 
 function toSidebarOption(tree = []) {
   if (!Array.isArray(tree)) return [];
@@ -17,8 +32,9 @@ function toSidebarOption(tree = []) {
   
     if (stat.isDirectory()) {
       return {
-        text: v.name,
-        link: v.path.split("docs")[1]+'/',
+        text: getTitle(v.name),
+        // link: v.path.split("docs")[1]+'/',
+        link: `/${v.name}/`,
         children: toSidebarOption(v.children),
       };
     } else {
@@ -55,21 +71,18 @@ function autoGetSidebarOptionBySrcDir(srcPath = SRC_PATH) {
   //console.log(JSON.stringify(children))
 
   const sideBar = toSidebarOption(children);
-  console.log('Generated all page same sidebar finished :)');
+  console.log('Generated sidebar finished :)');
   return sideBar;
 }
 
-
-
-
-
+//=================测试===============================
 //const result = autoGetSidebarOptionBySrcDir();
 //console.log(JSON.stringify(result));
 
 /** 生成的结果
 [
     {
-        "text":"vuepress",
+        "text":"Vuepress博客搭建",
         "link":"/vuepress/",
         "children":[
             {
@@ -88,6 +101,5 @@ function autoGetSidebarOptionBySrcDir(srcPath = SRC_PATH) {
     }
 ]
  */
-
 
 module.exports = autoGetSidebarOptionBySrcDir;
