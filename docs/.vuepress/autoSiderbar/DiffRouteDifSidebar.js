@@ -29,7 +29,7 @@ function autoGenSidebar(){
     });
     
     result['/topicNav/'].push({
-        text: titles[topicNav],
+        text: titles['topicNav'],
         children: topicNav
     })
 
@@ -37,7 +37,7 @@ function autoGenSidebar(){
 }
 
 // 测试
-console.log(JSON.stringify(autoGenSidebar()));
+//console.log(JSON.stringify(autoGenSidebar()));
 /**
 {
     "/vuepress/":[
