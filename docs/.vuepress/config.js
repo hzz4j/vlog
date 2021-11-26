@@ -12,6 +12,7 @@ module.exports = {
   description: '静默的Vuepress Blog',
   head: [['link', { rel: 'icon', href: '/images/favicon-32x32.png' }]], // icon设置
   base: '/vlog/',
+  
   themeConfig: {
     logo: '/images/logo.png',
     lastUpdated: false,   // 禁用显示更新时间
