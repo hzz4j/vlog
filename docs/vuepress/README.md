@@ -1,7 +1,7 @@
 ---
 prev:
   text: Back To 目录
-  link: /vuepress/
+  link: /topicNav/
 ---
 
 
