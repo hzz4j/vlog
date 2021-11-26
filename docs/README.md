@@ -5,7 +5,11 @@ heroText: '🏷️Hi : )🏷️'
 tagline: '静默的Vuepress Blog🏷️'
 actions:
   - text: 👉ENTRY
-    link: /vuepress/
+    link: /topicNav/
     type: primary
 ---
+
+
+
+
 

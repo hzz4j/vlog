@@ -8,7 +8,8 @@
  */
 
 const titles = {
-    'vuepress': 'Vuepress博客搭建'
+    'vuepress': 'Vuepress博客搭建',
+    'topicNav': '专题目录'
 };
 
 

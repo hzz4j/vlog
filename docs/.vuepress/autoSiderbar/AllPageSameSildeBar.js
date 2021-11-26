@@ -16,7 +16,7 @@ var fs = require('fs');
 function getTitle(name){
   if(titles[name] === undefined){
     console.log("===================================================================");
-    console.warn("[Warn]: 请在textTitle.js 文件中维护一个 %s 的title",'vuepress1');
+    console.warn("[Warn]: 请在 textTitle.js 文件中维护一个 %s 的title",name);
     console.log("===================================================================");
     return name;
   }
@@ -47,7 +47,7 @@ function toSidebarOption(tree = []) {
 }
 
 /**
- 去除.vuepress的节点
+ 如去除.vuepress的节点
  {
             "path":"d:/Github/vlog/docs/.vuepress",
             "name":".vuepress",
@@ -57,7 +57,15 @@ function toSidebarOption(tree = []) {
  * @returns 
  */
 function removeDotvuepress(srcDir){
-    return srcDir.children.filter(node => !node.path.endsWith('.vuepress') );
+    return srcDir.children.filter(node => {
+
+      if(node.path.endsWith('.vuepress')){
+        return false;
+      }else if(node.path.endsWith('topicNav')){
+        return false;
+      }
+      return true;
+    } );
 }
 
 function autoGetSidebarOptionBySrcDir(srcPath = SRC_PATH) {
