@@ -5,7 +5,13 @@ typora-root-url: ..\.vuepress\public
 
 
 
-> **专题目录**
+::: tip 
 
-<img src="/images/logo.png" style="zoom:50%;" />
+笔记专题总览
+
+点击每个专题，查看该专题的文章
+
+:::
+
+
 
