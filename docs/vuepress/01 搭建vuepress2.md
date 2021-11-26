@@ -11,7 +11,7 @@ typora-root-url: ..\.vuepress\public
 
 1. 在github创建仓库vlog 用于存放我们的项目，并克隆到电脑上
 
-   <img src="/images/vuepress/image-20211126054031455.png" alt="image-20211126054031455" style="zoom: 50%;" />
+   <img src="/vlog/vuepress/image-20211126054031455.png" alt="image-20211126054031455" style="zoom: 50%;" />
 
 2. 进入vlog目录，安装vuepress
 
